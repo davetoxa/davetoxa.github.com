@@ -55,6 +55,11 @@ html, body {
 	line-height: 1.3em;
 }
 
+.intro-pitch a {
+	color: #fff;
+	text-decoration: none;
+}
+
 .intro-pitch p {
 	color: rgba(255,255,255,.7);
 	display: block;
