@@ -49,7 +49,7 @@ html, body {
 }
 
 .intro-pitch h2 {
-	color: #fff;
+	color: rgba(255,255,255,.7);
 	font-size: 40px;
 	font-weight: normal;
 	line-height: 1.3em;
@@ -138,6 +138,7 @@ html, body {
 .fa-facebook { color:#49639e !important; }
 .fa-instagram { color:#554138 !important; }
 .fa-github { color:#333333 !important; }
+.fa-linkedin { color:#069 !important; }
 .fa-skype { color:#00aff0 !important; }
 .fa-envelope { color:#969696 !important; }
 
