@@ -11,7 +11,7 @@ html, body {
 
 .intro {
 	background-color: #000000;
-	background-image: url('../images/background.jpeg');
+	background-image: url('../images/background.jpg');
 	background-size: cover;
 	height: 100%;
 	position: relative;
