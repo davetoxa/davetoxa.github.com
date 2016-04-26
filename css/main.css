@@ -126,11 +126,9 @@ a.mkdev {
 
 .section a {
 	color: grey;
-	text-decoration: none;
 }
 .section a:hover {
 	color: blue;
-	text-decoration: none;
 }
 
 .learn {
