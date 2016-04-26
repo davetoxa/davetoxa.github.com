@@ -5,6 +5,19 @@ html, body {
 	font:500 16px Avenir, sans-serif;
 }
 
+h3 {
+	color: #777;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 1.2em;
+	text-transform: uppercase;
+}
+
+p {
+	padding: 15px;
+	font-size: 20px;
+}
+
 .wrapper {
 	height:100%;
 }
@@ -104,16 +117,21 @@ html, body {
 	text-align: center;
 }
 
-.networks {
-	padding: 60px 0 0;
+.blog {
+	padding: 40px 0 20px 0;
 }
 
-.networks h3 {
-	color: #777;
-	font-size: 20px;
-	font-weight: 600;
-	margin-bottom: 1.2em;
-	text-transform: uppercase;
+.blog a {
+	color: grey;
+	text-decoration: none;
+}
+.blog a:hover {
+	color: blue;
+	text-decoration: none;
+}
+
+.networks {
+	padding: 40px 0 20px 0;
 }
 
 .networks li {
@@ -144,10 +162,9 @@ html, body {
 
 .footer {
 	background-color: #fff;
-	padding: 45px 20px 45px;
+	padding: 40px 20px;
 	color: #777;
 }
-
 
 @media only screen and (max-width: 780px) {
 	html,	body,
