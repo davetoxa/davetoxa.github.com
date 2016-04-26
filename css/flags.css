@@ -18,6 +18,8 @@
   content: "\00a0";
 }
 
+/* Icons from https://github.com/lipis/flag-icon-css */
+
 .flag-ru { background-image: url(../images/flag-icon/ru.svg); }
 .flag-es { background-image: url(../images/flag-icon/es.svg); }
 .flag-de { background-image: url(../images/flag-icon/de.svg); }
