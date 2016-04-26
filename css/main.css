@@ -170,6 +170,13 @@ a.mkdev {
 .fa-skype { color:#00aff0 !important; }
 .fa-envelope { color:#969696 !important; }
 
+.map {
+	display: block;
+	width: 100%;
+	height: 400px;
+	position: relative;
+}
+
 .footer {
 	background-color: #fff;
 	padding: 40px 20px;
@@ -193,4 +200,6 @@ a.mkdev {
 	.tags .tag { font-size:17px; }
 
 	.section h3 { font-size:25px; margin-bottom:.4em; }
+
+	.map { height: 350px; }
 }
