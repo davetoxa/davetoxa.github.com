@@ -110,6 +110,9 @@ p {
 	margin: 4px 5px 0px;
 	padding: 6px 10px;
 }
+a.mkdev {
+	font-size: 22px
+}
 
 .section {
 	overflow: hidden;
@@ -121,13 +124,20 @@ p {
 	padding: 40px 0 20px 0;
 }
 
-.blog a {
+.section a {
 	color: grey;
 	text-decoration: none;
 }
-.blog a:hover {
+.section a:hover {
 	color: blue;
 	text-decoration: none;
+}
+
+.learn {
+	margin: 0 auto;
+	padding: 40px 30px 20px 30px;
+	width: 540px;
+	border: 2px red dotted;
 }
 
 .networks {
