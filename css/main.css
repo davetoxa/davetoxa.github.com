@@ -18,6 +18,10 @@ p {
 	font-size: 20px;
 }
 
+a.mkdev {
+	font-size: 22px
+}
+
 .wrapper {
 	height:100%;
 }
@@ -110,18 +114,11 @@ p {
 	margin: 4px 5px 0px;
 	padding: 6px 10px;
 }
-a.mkdev {
-	font-size: 22px
-}
 
 .section {
 	overflow: hidden;
 	padding: 75px 5% 55px;
 	text-align: center;
-}
-
-.blog {
-	padding: 40px 0 20px 0;
 }
 
 .section a {
@@ -131,6 +128,10 @@ a.mkdev {
 	color: blue;
 }
 
+.blog {
+	padding: 40px 0 20px 0;
+}
+
 .learn {
 	margin: 0 auto;
 	padding: 40px 30px 20px 30px;
@@ -138,25 +139,25 @@ a.mkdev {
 	border: 2px red dotted;
 }
 
-.networks {
+.connect {
 	padding: 40px 0 20px 0;
 }
 
-.networks li {
+.connect li {
 	display: inline-block;
-	margin: 0 25px 10px;
+	margin: 0 25px;
 }
 
-.networks li a {
+.connect li a {
 	display: block;
 }
 
-.networks li a i {
+.connect li a i {
 	font-size: 40px;
 	-webkit-transition: all .2s ease;
 }
 
-.networks li i:hover {
+.connect li i:hover {
 	-webkit-transform: scale(1.15);
 }
 
