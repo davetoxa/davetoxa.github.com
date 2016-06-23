@@ -4,8 +4,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-    <meta name="keywords" content="ruby, rails, ruby on rails, javascript, node, engineer, mentor, aws, devops, davetoxa">
-    <meta name="description" content="Anton Cherepanov. Full Stack Engineer. Mentor">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="description" content="{{ site.description }}">
+
+    <meta property="og:title" content="{{ site.keywords }}">
+    <meta property="og:description" content="{{ site.description }}">
+    <meta property="og:image" content="/images/background.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ site.keywords }}">
+    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="twitter:image" content="/images/background.jpg">
 
     <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
     <link rel="stylesheet" href="/css/flags.css">
