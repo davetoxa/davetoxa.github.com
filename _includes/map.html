@@ -14,18 +14,21 @@
 	<span class="flag flag-pt"></span>
 	<span class="flag flag-gb"></span>
 	<span class="flag flag-th"></span>
+	<span class="flag flag-my"></span>
+	<!-- <span class="flag flag-id"></span>
+	<span class="flag flag-sg"></span> -->
 </div>
 
 <div class="map"></div>
 <script>
 	function initMap() {
 	  var map = new google.maps.Map(document.getElementsByClassName('map')[0], {
-	    center: {lat: 50, lng: 25},
-	    zoom: 3,
+	    center: {lat: 37, lng: 25},
+	    zoom: 2,
       disableDefaultUI: false,
       zoomControl: true,
-      mapTypeControl: false,
-      streetViewControl: false,
+      mapTypeControl: true,
+      streetViewControl: true,
 			scrollwheel:  false
 	  });
 
@@ -66,6 +69,12 @@
 			[37.023, -8.996], // Cape Saint-Vincent
 			[51.50, -0.12], // London
 			[13.75, 100.49], // Bangkok
+			[12.92, 100.88], // Pattaya City
+			[7.95, 98.33], // Phuket
+			[7.74, 98.77], // Ko Phi Phi Don
+			[3.15, 101.71] // Kuala Lumpur
+			// [-8.40, 115.18], // Bali
+			// [1.35, 103.86] // Singapore
 		]
 
     for (i = 0; i < locations.length; i++) {
