@@ -129,7 +129,7 @@ a.mkdev {
 }
 
 .blog {
-	padding: 0px 0 20px 0;
+	padding: 40px 0 20px 0;
 }
 
 .learn {
@@ -162,13 +162,11 @@ a.mkdev {
 	-webkit-transform: scale(1.15);
 }
 
-.fa-twitter { color:#04aceb !important; }
 .fa-facebook { color:#49639e !important; }
 .fa-instagram { color:#554138 !important; }
 .fa-github { color:#333333 !important; }
 .fa-telegram { color:#04aceb !important; }
 .fa-linkedin { color:#069 !important; }
-.fa-skype { color:#00aff0 !important; }
 .fa-envelope { color:#969696 !important; }
 
 .map {

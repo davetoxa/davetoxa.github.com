@@ -1,4 +1,4 @@
-### Anton Cherepanov - personal site
+### Anthony Cherepanov - personal site
 
 Icons from [flag-icon-css](https://github.com/lipis/flag-icon-css)
 
