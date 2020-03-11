@@ -141,12 +141,12 @@ a.mkdev {
 }
 
 .connect {
-	padding: 40px 0 20px 0;
+	padding: 40px 0px;
 }
 
 .connect li {
 	display: inline-block;
-	margin: 0 25px;
+	margin: 15px 20px;
 }
 
 .connect li a {
@@ -169,6 +169,12 @@ a.mkdev {
 .fa-linkedin { color:#069 !important; }
 .fa-envelope { color:#969696 !important; }
 
+.flags {
+	display: block;
+	margin: 60px auto;
+	width: 70%;
+}
+
 .map {
 	display: block;
 	width: 100%;
@@ -178,7 +184,7 @@ a.mkdev {
 
 .footer {
 	background-color: #fff;
-	padding: 40px 20px;
+	padding: 60px 20px;
 	color: #777;
 }
 
