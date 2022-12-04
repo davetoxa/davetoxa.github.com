@@ -23,20 +23,24 @@
 	<span class="flag flag-ae"></span>
 	<span class="flag flag-be"></span>
 	<span class="flag flag-ch"></span>
+	<span class="flag flag-li"></span>
 	<span class="flag flag-nl"></span>
 	<span class="flag flag-mt"></span>
 	<span class="flag flag-gr"></span>
 	<span class="flag flag-tk"></span>
 	<span class="flag flag-us"></span>
 	<span class="flag flag-cy"></span>
+	<span class="flag flag-rs"></span>
+	<span class="flag flag-il"></span>
+	<span class="flag flag-se"></span>
 </div>
 
 <div class="map"></div>
 <script>
 	function initMap() {
 	  var map = new google.maps.Map(document.getElementsByClassName('map')[0], {
-	    center: {lat: 37, lng: 25},
-	    zoom: 2,
+	    center: {lat: 37, lng: 5},
+	    zoom: 3,
       disableDefaultUI: false,
       zoomControl: true,
       mapTypeControl: true,
@@ -97,11 +101,21 @@
 			[43.60,1.44], // Toulouse
 			[47.37,8.54], // Zurich
 			[52.37,4.89], // Amsterdam
+			[54.17,12.08], // Rostock
+			[51.34,12.37], // Leipzig
 			[47.26,11.39], // Innsbruck
 			[35.88,14.44], // Malta
 			[37.98,23.72], // Athens
 			[37.44,25.33], // Mykonos
 			[41.01,28.97], // Istambul
+			[50.23,12.87], // Karlovy Vary
+			[47.12,9.13], // Filzbach
+			[47.14,9.52], // Vaduz
+			[46.60,7.92], // Wengen
+			[46.55,7.89], // Gimmelwald
+			[46.94,7.44], // Bern
+			[47.05,8.30], // Luzern
+			[43.67,40.20], // Krasnaya Polyana
 			[25.76,-80.19], // Miami
 			[37.77,-122.41], // San Fransico
 			[36.59,-121.89], // Monterey
@@ -109,12 +123,38 @@
 			[34.05,-118.24], // Los Angeles
 			[33.87,-115.90], // Joshua Tree National Park
 			[40.71,-74.00], // New York
+			[50.11,8.68], // Frankfurt
+			[36.72,-4.42], // Malaga
+			[36.74,-5.16], // Ronda
+			[43.70,7.26], // Nice
+			[43.58,7.12], // Antibes
+			[43.73,7.42], // Monaco
+			[43.55,7.01], // Cannes
 			[57.15,65.56], // Tyumen
 			[34.76,32.41], // Paphos
 			[34.67,33.04], // Limassol
+			[44.19,7.16], // Isola 2000
+			[43.77,7.49], // Menton
+			[43.79,7.60], // Ventimiglia
+			[43.82,7.77], // Sanremo
+			[46.20,6.14], // Geneva
 			[41.87,-87.62], // Chicago
 			[36.99,-110.17], // Navajo Nation
-			[36.16,-115.14] // Las Vegas
+			[36.16,-115.14], // Las Vegas
+			[38.90,1.42], // Ibiza
+			[50.93,6.95], // Cologne
+			[50.73,7.10], // Bonn
+			[51.22,6.77], // Düsseldorf
+			[51.43,6.76], // Duisburg
+			[51.45,7.01], // Essen
+			[51.51,7.46], // Dortmund
+			[44.81,20.46], // Belgrad
+			[59.32,18.06], // Stockholm
+			[39.95,-75.16], // Philadelphia
+			[38.90,-77.03], // Washington D.C.
+			[42.36,-71.05], // Boston
+			[32.08,34.78], // Tel Aviv
+			[31.76,35.21] // Jerusalem
 		]
 
     for (i = 0; i < locations.length; i++) {
