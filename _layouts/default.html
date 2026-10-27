@@ -3,15 +3,36 @@
   {% include head.html %}
   <body>
     <div class="wrapper">
-      {% include intro.html %} {% include blog.html %} {% include connect.html
-      %} {% include map.html %} {% include metrica.html %}
+      {% include intro.html %} {% include about.html %} {% include podcast.html
+      %} {% include blog.html %} {% include connect.html %} {% include map.html
+      %} {% include metrica.html %}
       <div class="section footer">
-      <p>© <script>document.write(new Date().getFullYear())</script> Anton Cherepanov</p>
+        <p>
+          ©
+          <script>
+            document.write(new Date().getFullYear());
+          </script>
+          Anton Cherepanov
+        </p>
       </div>
     </div>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
       rel="stylesheet"
     />
+    <script
+      src="https://cdn.jsdelivr.net/gh/paulirish/lite-youtube-embed@0.3.4/src/lite-yt-embed.js"
+      defer
+    ></script>
+    <!-- Calendly popup widget assets -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
   </body>
 </html>

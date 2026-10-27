@@ -19,10 +19,17 @@ img {
   background: transparent;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
   font: 500 16px Avenir, sans-serif;
+  overflow-x: hidden;
 }
 
 h3 {
@@ -49,6 +56,7 @@ a.mkdev {
 .intro {
   background-color: #000000;
   background-image: url("../images/background.jpg");
+  background-position: 55% 40%;
   background-size: cover;
   height: 100%;
   position: relative;
@@ -102,9 +110,10 @@ a.mkdev {
 .intro-pitch {
   display: table;
   height: 100%;
-  line-height: 2.5em;
+  line-height: 1.4;
   margin: 0 auto;
   max-width: 1080px;
+  padding: 0 24px;
   position: relative;
   vertical-align: middle;
   width: 100%;
@@ -113,14 +122,21 @@ a.mkdev {
 
 .intro-pitch h2 {
   color: rgba(255, 255, 255, 1);
-  font-size: 40px;
+  font-size: 36px;
   font-weight: normal;
   line-height: 1.3em;
+  margin-bottom: 0.55em;
 }
 
 .intro-pitch a {
   color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-underline-offset: 3px;
+}
+
+.intro-pitch a:hover {
+  text-decoration-color: rgba(255, 255, 255, 0.9);
 }
 
 .intro-pitch p {
@@ -128,8 +144,21 @@ a.mkdev {
   display: block;
   font-size: 20px;
   font-weight: normal;
-  line-height: 100%;
-  margin-bottom: 1.3em;
+  line-height: 1.35;
+  margin-bottom: 0.75em;
+  padding: 0;
+}
+
+.intro-name {
+  letter-spacing: 0.02em;
+  margin-top: 1.1em;
+}
+
+.intro-tagline {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: 18px !important;
+  margin: 0 auto !important;
+  max-width: 520px;
 }
 
 .intro-pitch-inner {
@@ -144,23 +173,6 @@ a.mkdev {
   width: 100px;
 }
 
-.tags {
-  list-style: none;
-  margin: 1.4em auto 0;
-  width: 80%;
-}
-
-.tags .tag {
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 5px;
-  color: rgba(255, 255, 240, 0.9);
-  display: inline-block;
-  font-size: 20px;
-  line-height: 100%;
-  margin: 4px 5px 0px;
-  padding: 6px 10px;
-}
-
 .section {
   overflow: hidden;
   padding: 75px 5% 55px;
@@ -168,10 +180,112 @@ a.mkdev {
 }
 
 .section a {
-  color: grey;
+  color: #555;
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0.18);
+  text-underline-offset: 2px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 .section a:hover {
-  color: blue;
+  color: #1a1a1a;
+  text-decoration-color: rgba(0, 0, 0, 0.45);
+}
+
+.about {
+  padding: 70px 5% 40px;
+}
+
+.about-body {
+  margin: 0 auto;
+  max-width: 680px;
+  text-align: left;
+}
+
+.about-body p {
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  padding: 0 0 1.15em;
+}
+
+.about-body p:last-child {
+  padding-bottom: 0;
+}
+
+.podcast {
+  padding: 0px 5% 50px;
+}
+
+.podcast-body {
+  margin: 0 auto 1.5em;
+  max-width: 680px;
+  text-align: left;
+}
+
+.podcast-body p {
+  color: #333;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.65;
+  padding: 0 0 1em;
+}
+
+.calendly-popup-link {
+  background: none;
+  border: 0;
+  color: #0366d6;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+  text-decoration-color: rgba(3, 102, 214, 0.35);
+  text-underline-offset: 3px;
+}
+
+.calendly-popup-link:hover,
+.calendly-popup-link:focus {
+  text-decoration-color: rgba(3, 102, 214, 0.9);
+}
+
+.podcast-channel {
+  padding-bottom: 0 !important;
+  text-align: left;
+}
+
+.podcast-episodes {
+  display: grid;
+  gap: 1.75em;
+  grid-template-columns: 1fr;
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0;
+  text-align: left;
+}
+
+@media (min-width: 780px) {
+  .podcast-episodes {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.podcast-episode {
+  margin: 0;
+}
+
+.podcast-episode lite-youtube {
+  background-color: #000;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.podcast-episode figcaption {
+  margin-top: 0.75em;
+}
+
+.podcast-episode figcaption a {
+  font-size: 16px;
+  line-height: 1.45;
 }
 
 .blog {
@@ -190,9 +304,19 @@ a.mkdev {
   padding: 40px 0px;
 }
 
+.connect ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 28px;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 16px;
+}
+
 .connect li {
-  display: inline-block;
-  margin: 15px 20px;
+  display: block;
+  margin: 0;
 }
 
 .connect li a {
@@ -280,6 +404,12 @@ a.mkdev {
   .intro .intro-pitch p {
     margin-bottom: 0.8em;
   }
+  .intro .intro-pitch h2 {
+    font-size: 28px;
+  }
+  .intro .intro-tagline {
+    font-size: 16px !important;
+  }
   .intro .intro-inner {
     padding: 40px 0;
     position: relative;
@@ -289,13 +419,22 @@ a.mkdev {
     left: auto;
   }
 
-  .tags .tag {
+  .about-body p {
     font-size: 17px;
   }
 
   .section h3 {
     font-size: 25px;
     margin-bottom: 0.4em;
+  }
+
+  .connect ul {
+    gap: 18px;
+    padding: 0 12px;
+  }
+
+  .connect li a i {
+    font-size: 34px;
   }
 
   .map {
