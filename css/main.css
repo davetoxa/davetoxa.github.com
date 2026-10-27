@@ -1,3 +1,28 @@
+/* Singula-aligned personal site tones */
+:root {
+  --color-ink: #26262c;
+  --color-ink-soft: #333344;
+  --color-muted: #888899;
+  --color-line: #c0c0cc;
+  --color-surface: #f5f6f8;
+  --color-surface-alt: #ffffff;
+  --color-hero: #121218;
+  --color-hero-mid: #1a2a2e;
+  --color-teal: #008080;
+  --color-teal-bright: #00a3a0;
+  --color-teal-deep: #0a5c5c;
+  --color-link: #007a7a;
+  --color-on-dark: #ffffff;
+  --color-on-dark-muted: rgba(255, 255, 255, 0.78);
+  --font-sans: "Manrope", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --space-section: clamp(4.5rem, 8vw, 6.5rem);
+  --space-section-sm: clamp(3rem, 5vw, 4.5rem);
+  --content-width: 680px;
+  --content-wide: 900px;
+  --radius: 8px;
+  --transition: 0.2s ease;
+}
+
 html,
 body,
 div,
@@ -28,37 +53,44 @@ img {
 html,
 body {
   height: 100%;
-  font: 500 16px Avenir, sans-serif;
+  font: 400 16px/1.55 var(--font-sans);
+  color: var(--color-ink);
+  background: var(--color-surface-alt);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h3 {
-  color: #777;
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 1.2em;
+  color: var(--color-ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin-bottom: 1.75em;
   text-transform: uppercase;
 }
 
 p {
   padding: 15px;
-  font-size: 20px;
+  font-size: 1.125rem;
 }
 
 a.mkdev {
-  font-size: 22px;
+  font-size: 1.25rem;
 }
 
 .wrapper {
   height: 100%;
 }
 
+/* ——— Hero ——— */
 .intro {
-  background-color: #000000;
+  background-color: var(--color-hero);
   background-image: url("../images/background.jpg");
   background-position: 55% 40%;
   background-size: cover;
   height: 100%;
+  min-height: 100vh;
   position: relative;
   text-align: center;
   width: 100%;
@@ -74,46 +106,29 @@ a.mkdev {
 
 .intro-gradient {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   z-index: 0;
-  opacity: 0.5;
-  background: rgba(0, 0, 0, 0.9);
-  background: -webkit-radial-gradient(
-    60% 60%,
-    ellipse closest-corner,
-    rgba(60, 60, 60, 1) 1%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-  background: -moz-radial-gradient(
-    60% 50%,
-    ellipse closest-corner,
-    rgba(0, 0, 0, 1) 1%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-  background: -ms-radial-gradient(
-    50% 50%,
-    ellipse closest-corner,
-    rgba(0, 0, 0, 1) 1%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
-  background: radial-gradient(
-    60% 60%,
-    ellipse closest-corner,
-    rgba(150, 190, 190, 1) 1%,
-    rgba(0, 0, 0, 0.3) 100%
-  );
+  background:
+    linear-gradient(
+      160deg,
+      rgba(10, 40, 44, 0.88) 0%,
+      rgba(18, 18, 24, 0.72) 45%,
+      rgba(0, 80, 80, 0.55) 100%
+    ),
+    radial-gradient(
+      ellipse closest-corner at 60% 55%,
+      rgba(0, 163, 160, 0.35) 0%,
+      rgba(18, 18, 24, 0.55) 70%
+    );
 }
 
 .intro-pitch {
   display: table;
   height: 100%;
-  line-height: 1.4;
+  line-height: 1.45;
   margin: 0 auto;
   max-width: 1080px;
-  padding: 0 24px;
+  padding: 0 1.5rem;
   position: relative;
   vertical-align: middle;
   width: 100%;
@@ -121,44 +136,50 @@ a.mkdev {
 }
 
 .intro-pitch h2 {
-  color: rgba(255, 255, 255, 1);
-  font-size: 36px;
-  font-weight: normal;
-  line-height: 1.3em;
-  margin-bottom: 0.55em;
+  color: var(--color-on-dark);
+  font-size: clamp(1.75rem, 4vw, 2.35rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.25;
+  margin-bottom: 0.65em;
 }
 
 .intro-pitch a {
-  color: #fff;
+  color: var(--color-on-dark);
   text-decoration: underline;
-  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-decoration-color: rgba(0, 163, 160, 0.55);
   text-underline-offset: 3px;
 }
 
 .intro-pitch a:hover {
-  text-decoration-color: rgba(255, 255, 255, 0.9);
+  text-decoration-color: var(--color-teal-bright);
 }
 
 .intro-pitch p {
-  color: rgba(255, 255, 255, 1);
+  color: var(--color-on-dark);
   display: block;
-  font-size: 20px;
-  font-weight: normal;
-  line-height: 1.35;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: 1.45;
   margin-bottom: 0.75em;
   padding: 0;
 }
 
 .intro-name {
-  letter-spacing: 0.02em;
-  margin-top: 1.1em;
+  letter-spacing: 0.04em;
+  margin-top: 1.25em;
+  font-size: 0.9375rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase;
+  color: var(--color-teal-bright) !important;
 }
 
 .intro-tagline {
-  color: rgba(255, 255, 255, 0.82) !important;
-  font-size: 18px !important;
+  color: var(--color-on-dark-muted) !important;
+  font-size: 1.0625rem !important;
   margin: 0 auto !important;
-  max-width: 520px;
+  max-width: 28rem;
+  font-weight: 400 !important;
 }
 
 .intro-pitch-inner {
@@ -168,45 +189,51 @@ a.mkdev {
 
 .intro-avatar {
   border-radius: 50%;
-  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-  height: 100px;
-  width: 100px;
+  border: 2px solid rgba(0, 163, 160, 0.45);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
+  height: 104px;
+  width: 104px;
+  object-fit: cover;
 }
 
+/* ——— Sections ——— */
 .section {
   overflow: hidden;
-  padding: 75px 5% 55px;
+  padding: var(--space-section) 5% var(--space-section-sm);
   text-align: center;
+  background: var(--color-surface-alt);
 }
 
 .section a {
-  color: #555;
+  color: var(--color-link);
   text-decoration: underline;
-  text-decoration-color: rgba(0, 0, 0, 0.18);
-  text-underline-offset: 2px;
-  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+  text-decoration-color: rgba(0, 122, 122, 0.35);
+  text-underline-offset: 3px;
+  transition: color var(--transition), text-decoration-color var(--transition);
 }
+
 .section a:hover {
-  color: #1a1a1a;
-  text-decoration-color: rgba(0, 0, 0, 0.45);
+  color: var(--color-teal-deep);
+  text-decoration-color: rgba(10, 92, 92, 0.7);
 }
 
 .about {
-  padding: 70px 5% 40px;
+  padding: var(--space-section) 5% var(--space-section-sm);
+  background: var(--color-surface);
 }
 
 .about-body {
   margin: 0 auto;
-  max-width: 680px;
+  max-width: var(--content-width);
   text-align: left;
 }
 
 .about-body p {
-  color: #333;
-  font-size: 18px;
+  color: var(--color-ink-soft);
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.65;
-  padding: 0 0 1.15em;
+  line-height: 1.7;
+  padding: 0 0 1.25em;
 }
 
 .about-body p:last-child {
@@ -214,38 +241,41 @@ a.mkdev {
 }
 
 .podcast {
-  padding: 0px 5% 50px;
+  padding: var(--space-section-sm) 5% var(--space-section);
+  background: var(--color-surface-alt);
 }
 
 .podcast-body {
-  margin: 0 auto 1.5em;
-  max-width: 680px;
+  margin: 0 auto 2rem;
+  max-width: var(--content-width);
   text-align: left;
 }
 
 .podcast-body p {
-  color: #333;
-  font-size: 18px;
+  color: var(--color-ink-soft);
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 1.65;
+  line-height: 1.7;
   padding: 0 0 1em;
 }
 
 .calendly-popup-link {
   background: none;
   border: 0;
-  color: #0366d6;
+  color: var(--color-link);
   cursor: pointer;
   font: inherit;
   padding: 0;
   text-decoration: underline;
-  text-decoration-color: rgba(3, 102, 214, 0.35);
+  text-decoration-color: rgba(0, 122, 122, 0.35);
   text-underline-offset: 3px;
 }
 
 .calendly-popup-link:hover,
 .calendly-popup-link:focus {
-  text-decoration-color: rgba(3, 102, 214, 0.9);
+  color: var(--color-teal-deep);
+  text-decoration-color: rgba(10, 92, 92, 0.7);
+  outline: none;
 }
 
 .podcast-channel {
@@ -255,10 +285,10 @@ a.mkdev {
 
 .podcast-episodes {
   display: grid;
-  gap: 1.75em;
+  gap: 2rem;
   grid-template-columns: 1fr;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: var(--content-wide);
   padding: 0;
   text-align: left;
 }
@@ -274,44 +304,69 @@ a.mkdev {
 }
 
 .podcast-episode lite-youtube {
-  background-color: #000;
-  border-radius: 4px;
+  background-color: var(--color-ink);
+  border-radius: var(--radius);
   overflow: hidden;
+  box-shadow: 0 12px 32px rgba(38, 38, 44, 0.12);
 }
 
 .podcast-episode figcaption {
-  margin-top: 0.75em;
+  margin-top: 0.85em;
 }
 
 .podcast-episode figcaption a {
-  font-size: 16px;
+  font-size: 0.9375rem;
   line-height: 1.45;
+  color: var(--color-ink-soft);
+  text-decoration-color: rgba(0, 122, 122, 0.25);
+}
+
+.podcast-episode figcaption a:hover {
+  color: var(--color-link);
 }
 
 .blog {
-  padding: 40px 0 20px 0;
+  padding: var(--space-section-sm) 5%;
+  background: var(--color-surface);
+}
+
+.blog p {
+  padding: 0.35em 0;
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.blog p a {
+  font-size: 1.0625rem;
+  font-weight: 500;
 }
 
 .learn {
   margin: 60px auto;
-  padding: 40px 0px 20px 0px;
+  padding: 40px 0 20px;
   width: 55%;
-  border: 0.15em #f59937 solid;
+  border: 0.15em var(--color-teal) solid;
   border-radius: 20px;
 }
 
 .connect {
-  padding: 40px 0px;
+  padding: var(--space-section-sm) 5% var(--space-section);
+  background: var(--color-ink);
+  color: var(--color-on-dark);
+}
+
+.connect h3 {
+  color: var(--color-on-dark);
 }
 
 .connect ul {
   display: flex;
   flex-wrap: nowrap;
-  gap: 28px;
+  gap: 1.75rem;
   justify-content: center;
   list-style: none;
   margin: 0;
-  padding: 0 16px;
+  padding: 0 1rem;
 }
 
 .connect li {
@@ -321,55 +376,47 @@ a.mkdev {
 
 .connect li a {
   display: block;
+  color: var(--color-on-dark);
+  text-decoration: none;
 }
 
 .connect li a i {
-  font-size: 40px;
-  -webkit-transition: all 0.2s ease;
+  font-size: 2.25rem;
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: transform var(--transition), color var(--transition);
 }
 
-.connect li i:hover {
-  -webkit-transform: scale(1.15);
-}
-
-.fa-facebook {
-  color: #49639e !important;
-}
-.fa-instagram {
-  color: #554138 !important;
-}
-.fa-github {
-  color: #333333 !important;
-}
-.fa-telegram {
-  color: #04aceb !important;
-}
-.fa-linkedin {
-  color: #069 !important;
-}
-.fa-envelope {
-  color: #969696 !important;
+.connect li a:hover i {
+  color: var(--color-teal-bright) !important;
+  transform: scale(1.12);
 }
 
 .flags {
   display: block;
-  margin: 10px auto 60px;
-  width: 70%;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--content-wide);
+  padding: var(--space-section-sm) 5% 2rem;
   text-align: center;
+  background: var(--color-surface-alt);
+}
+
+.flags h3 {
+  margin-bottom: 1.25em;
 }
 
 .fi {
   width: 30px;
   height: auto;
   margin: 5px;
-  font-size: 30px;
+  font-size: 1.75rem;
   border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(38, 38, 44, 0.12);
+  transition: transform var(--transition);
 }
 
 .fi:hover {
-  transform: scale(1.2);
-  transition: transform 0.2s ease;
+  transform: scale(1.15);
 }
 
 .map {
@@ -377,12 +424,19 @@ a.mkdev {
   width: 100%;
   height: 400px;
   position: relative;
+  border-top: 1px solid rgba(192, 192, 204, 0.5);
 }
 
 .footer {
-  background-color: #fff;
-  padding: 60px 20px;
-  color: #777;
+  background-color: var(--color-ink);
+  padding: 3rem 1.25rem;
+  color: var(--color-muted);
+}
+
+.footer p {
+  padding: 0;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
 }
 
 @media only screen and (max-width: 780px) {
@@ -395,46 +449,54 @@ a.mkdev {
     height: auto;
   }
 
+  .intro {
+    min-height: 100svh;
+  }
+
   .intro .intro-pitch {
     display: block;
   }
+
   .intro .intro-pitch-inner {
     display: block;
   }
+
   .intro .intro-pitch p {
     margin-bottom: 0.8em;
   }
+
   .intro .intro-pitch h2 {
-    font-size: 28px;
+    font-size: 1.65rem;
   }
+
   .intro .intro-tagline {
-    font-size: 16px !important;
+    font-size: 1rem !important;
   }
+
   .intro .intro-inner {
-    padding: 40px 0;
+    padding: 3.5rem 0;
     position: relative;
-    top: auto;
-    right: auto;
-    bottom: auto;
-    left: auto;
+    inset: auto;
   }
 
-  .about-body p {
-    font-size: 17px;
+  .about-body p,
+  .podcast-body p {
+    font-size: 1.0625rem;
   }
 
-  .section h3 {
-    font-size: 25px;
-    margin-bottom: 0.4em;
+  .section h3,
+  .flags h3 {
+    font-size: 0.75rem;
+    margin-bottom: 1.25em;
   }
 
   .connect ul {
-    gap: 18px;
-    padding: 0 12px;
+    gap: 1.15rem;
+    padding: 0 0.75rem;
   }
 
   .connect li a i {
-    font-size: 34px;
+    font-size: 1.85rem;
   }
 
   .map {
